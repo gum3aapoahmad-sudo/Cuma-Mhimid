@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حلبي للخدمات - الفخامة الرقمية</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <style>
+      :root {
+        --bg-color: #050505;
+        --text-color: #f3f4f6;
+        --card-bg: #111111;
+        --border-color: rgba(255, 255, 255, 0.05);
+        --secondary-bg: #0a0a0a;
+        --hero-overlay: rgba(5, 5, 5, 0.8);
+      }
+
+      .theme-light {
+        --bg-color: #f8f9fa;
+        --text-color: #1a1a1a;
+        --card-bg: #ffffff;
+        --border-color: rgba(0, 0, 0, 0.08);
+        --secondary-bg: #ffffff;
+        --hero-overlay: rgba(248, 249, 250, 0.7);
+      }
+
+      body {
+        font-family: 'Cairo', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      @media (hover: hover) and (pointer: fine) {
+        body {
+          cursor: auto;
+        }
+      }
+
+      .gold-text {
+        background: linear-gradient(to right, #bf953f, #aa771c, #b38728, #aa771c, #bf953f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% auto;
+      }
+
+      .gold-glow {
+        filter: drop-shadow(0 0 10px rgba(251, 191, 36, 0.5));
+      }
+      
+      .glass-card {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+      }
+
+      .selection-amber ::selection {
+        background: #bf953f;
+        color: #000;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--secondary-bg);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #bf953f;
+        border-radius: 4px;
+      }
+      
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      
+      .theme-transition {
+        transition: all 0.3s ease;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "three": "https://esm.sh/three@^0.182.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7"
+  }
+}
+</script>
+</head>
+  <body class="selection-amber">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
